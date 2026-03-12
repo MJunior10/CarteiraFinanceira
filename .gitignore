@@ -1,0 +1,14 @@
+# Dependências do React
+node_modules/
+dist/
+.env
+
+# Arquivos do C#
+bin/
+obj/
+appsettings.Development.json
+appsettings.json
+
+# Arquivos do Sistema Operacional
+.DS_Store
+Thumbs.db
