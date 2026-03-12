@@ -68,4 +68,4 @@ Bash
 npm run dev
 Acesse a aplicação no seu navegador (geralmente em http://localhost:5173).
 
-Desenvolvido com ☕ e foco em arquitetura de software por [Seu Nome].
+Desenvolvido com ☕ e foco em arquitetura de software por Mauro Junior.
