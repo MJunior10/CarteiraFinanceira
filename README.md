@@ -43,21 +43,7 @@
 ## 🗂️ Estrutura do Projeto
 
 ```
-FinanceApp/
-├── backend/
-│   ├── Controllers/        # Endpoints da API
-│   ├── Models/             # Entidades do banco de dados
-│   ├── DTOs/               # Objetos de transferência de dados
-│   ├── Services/           # Regras de negócio
-│   ├── Repositories/       # Acesso ao banco de dados
-│   ├── Data/               # Contexto do Entity Framework
-│   └── Program.cs          # Configuração da aplicação
-└── frontend/
-    ├── src/
-    │   ├── components/     # Componentes React
-    │   ├── pages/          # Páginas da aplicação
-    │   └── services/       # Chamadas à API
-    └── package.json
+![Estrutura](./docs/Estrutura.png)
 ```
 
 ---
@@ -75,8 +61,8 @@ FinanceApp/
 
 ```bash
 # 1. Clone o repositório
-git clone https://github.com/MJunior10/CarteiraFinanceira
-cd CarteiraFinanceira/SistemaFinanceiro.API
+git clone https://github.com/MJunior10/SEU-REPO-AQUI.git
+cd SEU-REPO-AQUI/backend
 
 # 2. Configure a string de conexão no appsettings.json
 # "ConnectionStrings": {
@@ -90,7 +76,7 @@ dotnet ef database update
 dotnet run
 
 # 5. Acesse a documentação Scalar
-# http://localhost:5191/scalar
+# http://localhost:5000/scalar
 ```
 
 ### Frontend
@@ -103,7 +89,80 @@ cd ../frontend
 npm install
 
 # Rode o projeto
-npm run dev
-Acesse a aplicação no seu navegador (geralmente em http://localhost:5173).
+npm start
 
-Desenvolvido com ☕ e foco em arquitetura de software por [Mauro Junior].
+# Acesse no navegador
+# http://localhost:3000
+```
+
+---
+
+## 📡 Principais Endpoints
+
+### Transações
+
+| Método | Rota | Descrição |
+|--------|------|-----------|
+| `GET` | `/api/transacoes` | Lista todas as transações |
+| `GET` | `/api/transacoes/{id}` | Busca transação por ID |
+| `POST` | `/api/transacoes` | Cria nova transação |
+| `PUT` | `/api/transacoes/{id}` | Atualiza transação |
+| `DELETE` | `/api/transacoes/{id}` | Remove transação |
+
+### Categorias
+
+| Método | Rota | Descrição |
+|--------|------|-----------|
+| `GET` | `/api/categorias` | Lista todas as categorias |
+| `POST` | `/api/categorias` | Cria nova categoria |
+
+### Dashboard
+
+| Método | Rota | Descrição |
+|--------|------|-----------|
+| `GET` | `/api/dashboard` | Retorna resumo financeiro do período |
+
+---
+
+## 📸 Screenshots
+
+> *Adicione aqui prints do frontend e da documentação Scalar*
+>
+> ```markdown
+> ![Dashboard](./docs/Frontend.png)
+> ![Scalar Docs](./docs/Scalar.png)
+> ```
+
+---
+
+## 🧠 O que aprendi neste projeto
+
+- Desenvolvimento de API RESTful com ASP.NET Core
+- Integração com PostgreSQL via Entity Framework Core
+- Separação de responsabilidades: Controllers, Services, Repositories
+- Documentação de APIs com Scalar
+- Construção de interface com React consumindo API própria
+- Versionamento com Git e GitHub
+
+---
+
+## 🔮 Próximos Passos
+
+- [ ] Implementar autenticação com JWT
+- [ ] Adicionar testes unitários com xUnit
+- [ ] Deploy do backend no Railway ou Render
+- [ ] Deploy do frontend na Vercel
+- [ ] Melhorar validações nos DTOs
+
+---
+
+## 👨‍💻 Autor
+
+**Mauro Junior**
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/mauro-junior-29b997215)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MJunior10)
+
+---
+
+> 💡 *Este projeto foi desenvolvido para fins de aprendizado e portfólio pessoal.*
