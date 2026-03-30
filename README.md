@@ -43,7 +43,7 @@
 ## 🗂️ Estrutura do Projeto
 
 ```
-![Estrutura](/docs/Estrutura.png)
+![Estrutura](./docs/Estrutura.png)
 ```
 
 ---
@@ -129,8 +129,8 @@ npm start
 > *Adicione aqui prints do frontend e da documentação Scalar*
 >
 > ```markdown
-> ![Frontend](/docs/Frontend.png)
-> ![Scalar Docs](/docs/Scalar.png)
+> ![Frontend](./docs/Frontend.png)
+> ![Scalar Docs](./docs/Scalar.png)
 > ```
 
 ---
