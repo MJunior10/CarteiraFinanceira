@@ -6,7 +6,7 @@
 
 ## 🚀 Demonstração
 
-> 🔧 *Em breve: link do deploy*
+> 🔧 [Frontend ao vivo](https://carteira-financeira-tau.vercel.app)
 
 ---
 
@@ -62,8 +62,8 @@
 
 ```bash
 # 1. Clone o repositório
-git clone https://github.com/MJunior10/SEU-REPO-AQUI.git
-cd SEU-REPO-AQUI/backend
+git clone https://github.com/MJunior10/CarteiraFinanceira
+cd /CarteiraFinanceira/SistemaFinanceiro.API
 
 # 2. Configure a string de conexão no appsettings.json
 # "ConnectionStrings": {
