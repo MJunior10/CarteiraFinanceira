@@ -1,71 +1,182 @@
-# 💸 Sistema de Controle Financeiro Full-Stack
+# 💰 FinanceAPI — Controle Financeiro Pessoal
 
-Um sistema completo para gestão de finanças pessoais, construído com uma arquitetura moderna e separada (Decoupled Architecture) utilizando **API RESTful em C#** e uma **Single Page Application (SPA) em React**. 
+> Aplicação fullstack para controle financeiro pessoal. O **backend** é uma API RESTful desenvolvida em **C# com ASP.NET Core**, e o **frontend** foi construído em **React**. Permite gerenciar receitas e despesas, organizar por categorias e visualizar o resumo financeiro por período.
 
-Este projeto foi desenvolvido com foco em **Experiência do Usuário (UX)**, **Responsividade** e **Tratamento Robusto de Erros**, demonstrando o fluxo completo de dados desde o banco de dados relacional até a interface do usuário.
+---
 
-![Status do Projeto](https://img.shields.io/badge/Status-Concluído-success)
-![C#](https://img.shields.io/badge/Backend-C%23_|_ASP.NET_Core-512BD4?logo=c-sharp&logoColor=white)
-![React](https://img.shields.io/badge/Frontend-React_|_Vite-61DAFB?logo=react&logoColor=black)
-![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-336791?logo=postgresql&logoColor=white)
+## 🚀 Demonstração
 
-## ✨ Funcionalidades Principais
+> 🔧 *Em breve: link do deploy*
 
-- **Dashboard Dinâmico:** Resumo em tempo real de Receitas, Despesas e Saldo Atual com base no mês selecionado.
-- **Gráficos Interativos:** Integração com `Recharts` para visualização da distribuição de despesas por categoria, respeitando as cores personalizadas salvas no banco de dados.
-- **Gestão de Transações e Categorias (CRUD Completo):** - Criação, edição e exclusão de movimentações com interface baseada em Modais (sem uso de alertas nativos do navegador).
-  - Categorização com seleção de cores hexadecimais nativas do HTML5.
-- **Filtro Mensal Inteligente:** Navegação rápida entre meses com recálculo automático de todo o Dashboard na memória do cliente.
-- **Exclusão em Massa (Bulk Delete):** Sistema de seleção múltipla (checkboxes) que utiliza `Promise.all` para processar múltiplas requisições assíncronas de exclusão simultaneamente.
-- **Tratamento de Erros Profissional:** O frontend intercepta as validações de *Problem Details* do ASP.NET Core e traduz os erros (ex: chaves estrangeiras em uso, valores inválidos) para mensagens amigáveis na interface gráfica.
-- **Design Responsivo (Mobile First):** Layout adaptável para smartphones, tablets e desktops utilizando CSS puro e Media Queries.
+---
 
-## 🛠️ Tecnologias e Ferramentas
+## 🧰 Tecnologias Utilizadas
 
-### Backend (API)
-* **C# / ASP.NET Core Web API:** Estrutura base da aplicação.
-* **Entity Framework Core (EF Core):** ORM (Object-Relational Mapper) para manipulação de dados utilizando a abordagem Code-First.
-* **PostgreSQL:** Banco de dados relacional forte e escalável.
-* **Data Annotations:** Para validação rigorosa de dados na porta de entrada da API.
+### Backend
+| Tecnologia | Uso |
+|---|---|
+| C# / ASP.NET Core | Framework principal da API |
+| PostgreSQL | Banco de dados relacional |
+| Entity Framework Core | ORM para acesso ao banco |
+| Scalar | Documentação interativa da API |
 
-### Frontend (Interface)
-* **React (com Vite):** Biblioteca principal para componentização e reatividade.
-* **Recharts:** Para geração do gráfico de pizza animado.
-* **CSS Puro:** Sem dependência de frameworks pesados, garantindo alta performance e controle total do layout.
+### Frontend
+| Tecnologia | Uso |
+|---|---|
+| React | Interface do usuário |
+| JavaScript | Linguagem do frontend |
 
-## 🚀 Como Executar o Projeto Localmente
+---
+
+## ✅ Funcionalidades
+
+- [x] Cadastro de **receitas e despesas**
+- [x] Organização por **categorias de gastos**
+- [x] **Dashboard** com resumo financeiro por período
+- [x] Interface visual em **React**
+- [x] Documentação interativa com **Scalar**
+- [ ] Autenticação JWT *(em desenvolvimento)*
+- [ ] Deploy em produção *(em breve)*
+
+---
+
+## 🗂️ Estrutura do Projeto
+
+```
+FinanceApp/
+├── backend/
+│   ├── Controllers/        # Endpoints da API
+│   ├── Models/             # Entidades do banco de dados
+│   ├── DTOs/               # Objetos de transferência de dados
+│   ├── Services/           # Regras de negócio
+│   ├── Repositories/       # Acesso ao banco de dados
+│   ├── Data/               # Contexto do Entity Framework
+│   └── Program.cs          # Configuração da aplicação
+└── frontend/
+    ├── src/
+    │   ├── components/     # Componentes React
+    │   ├── pages/          # Páginas da aplicação
+    │   └── services/       # Chamadas à API
+    └── package.json
+```
+
+---
+
+## ⚙️ Como Rodar Localmente
 
 ### Pré-requisitos
-* [.NET 8.0 SDK](https://dotnet.microsoft.com/download) (ou superior)
-* [Node.js](https://nodejs.org/)
-* [PostgreSQL](https://www.postgresql.org/) rodando localmente.
 
-### Passo 1: Configurando o Backend
-1. Navegue até a pasta da API: `cd API` (ou o nome da sua pasta do C#).
-2. Atualize a sua `Connection String` no arquivo `appsettings.json` com as credenciais do seu PostgreSQL.
-3. Crie o banco de dados e as tabelas rodando as migrations do EF Core:
-   
-   dotnet ef database update
-   
-4. Inicie o servidor da API:
+- [.NET 8 SDK](https://dotnet.microsoft.com/download)
+- [Node.js](https://nodejs.org/) (v18+)
+- [PostgreSQL](https://www.postgresql.org/download/)
+- [Git](https://git-scm.com/)
 
+### Backend
 
-    dotnet run
-A API geralmente rodará em http://localhost:5191.
+```bash
+# 1. Clone o repositório
+git clone https://github.com/MJunior10/CarteiraFinanceira
+cd CarteiraFinanceira/SistemaFinanceiro.API
 
-Passo 2: Configurando o Frontend
-Abra um novo terminal e navegue até a pasta do Frontend: cd Frontend (ou o nome da sua pasta do React).
+# 2. Configure a string de conexão no appsettings.json
+# "ConnectionStrings": {
+#   "DefaultConnection": "Host=localhost;Database=financedb;Username=SEU_USER;Password=SUA_SENHA"
+# }
 
-Instale as dependências do projeto:
+# 3. Aplique as migrations
+dotnet ef database update
 
-Bash
+# 4. Rode a API
+dotnet run
 
+# 5. Acesse a documentação Scalar
+# http://localhost:5191/scalar
+```
+
+### Frontend
+
+```bash
+# Em outro terminal, na pasta frontend
+cd ../frontend
+
+# Instale as dependências
 npm install
-Inicie o servidor de desenvolvimento:
 
-Bash
-
+# Rode o projeto
 npm run dev
-Acesse a aplicação no seu navegador (geralmente em http://localhost:5173).
 
-Desenvolvido com ☕ e foco em arquitetura de software por [Seu Nome].
+# Acesse no navegador
+# http://localhost:5173
+```
+
+---
+
+## 📡 Principais Endpoints
+
+### Transações
+
+| Método | Rota | Descrição |
+|--------|------|-----------|
+| `GET` | `/api/transacoes` | Lista todas as transações |
+| `GET` | `/api/transacoes/{id}` | Busca transação por ID |
+| `POST` | `/api/transacoes` | Cria nova transação |
+| `PUT` | `/api/transacoes/{id}` | Atualiza transação |
+| `DELETE` | `/api/transacoes/{id}` | Remove transação |
+
+### Categorias
+
+| Método | Rota | Descrição |
+|--------|------|-----------|
+| `GET` | `/api/categorias` | Lista todas as categorias |
+| `POST` | `/api/categorias` | Cria nova categoria |
+
+### Dashboard
+
+| Método | Rota | Descrição |
+|--------|------|-----------|
+| `GET` | `/api/dashboard` | Retorna resumo financeiro do período |
+
+---
+
+## 📸 Screenshots
+
+> *Adicione aqui prints do frontend e da documentação Scalar*
+>
+> ```markdown
+> ![Dashboard](./docs/Frontend.png)
+> ![Scalar Docs](./docs/Scalar.png)
+> ```
+
+---
+
+## 🧠 O que aprendi neste projeto
+
+- Desenvolvimento de API RESTful com ASP.NET Core
+- Integração com PostgreSQL via Entity Framework Core
+- Separação de responsabilidades: Controllers, Services, Repositories
+- Documentação de APIs com Scalar
+- Construção de interface com React consumindo API própria
+- Versionamento com Git e GitHub
+
+---
+
+## 🔮 Próximos Passos
+
+- [ ] Implementar autenticação com JWT
+- [ ] Adicionar testes unitários com xUnit
+- [ ] Deploy do backend no Railway ou Render
+- [ ] Deploy do frontend na Vercel
+- [ ] Melhorar validações nos DTOs
+
+---
+
+## 👨‍💻 Autor
+
+**Mauro Junior**
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/mauro-junior-29b997215)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MJunior10)
+
+---
+
+> 💡 *Este projeto foi desenvolvido para fins de aprendizado e portfólio pessoal.*
