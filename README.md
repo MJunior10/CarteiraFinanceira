@@ -42,10 +42,10 @@
 
 ## 🗂️ Estrutura do Projeto
 
-```
+
 ![Estrutura](https://raw.githubusercontent.com/MJunior10/CarteiraFinanceira/main/docs/Estrutura.png)
-```
-```
+
+
 
 ---
 
@@ -129,10 +129,10 @@ npm start
 
 > *Adicione aqui prints do frontend e da documentação Scalar*
 >
-> ```markdown
+> 
 > ![Frontend](https://raw.githubusercontent.com/MJunior10/CarteiraFinanceira/main/docs/Frontend.png)
 > ![Scalar Docs](https://raw.githubusercontent.com/MJunior10/CarteiraFinanceira/main/docs/Scalar.png)
-> ```
+
 
 ---
 
