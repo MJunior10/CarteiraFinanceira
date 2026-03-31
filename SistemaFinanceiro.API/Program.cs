@@ -41,11 +41,11 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
-    app.MapScalarApiReference(); // Nova interface para acessar a documentação da API a partir do endpoint /scalar-api-reference do .NET 9
+
 }
 
 //app.UseHttpsRedirection();
-
+app.MapScalarApiReference(); // Nova interface para acessar a documentação da API a partir do endpoint /scalar-api-reference do .NET 9
 var summaries = new[]
 {
     "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
