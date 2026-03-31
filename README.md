@@ -6,8 +6,8 @@
 
 ## 🚀 Demonstração
 
-> 🔧 [Frontend ao vivo](https://carteira-financeira-tau.vercel.app)
-
+> 🔧 [Frontend ao vivo](https://carteira-financeira-beta.vercel.app)
+> 🔧 [Backend ao vivo](https://carteirafinanceira-production.up.railway.app/scalar/v1)
 ---
 
 ## 🧰 Tecnologias Utilizadas
@@ -35,8 +35,7 @@
 - [x] **Dashboard** com resumo financeiro por período
 - [x] Interface visual em **React**
 - [x] Documentação interativa com **Scalar**
-- [ ] Autenticação JWT *(em desenvolvimento)*
-- [ ] Deploy em produção *(em breve)*
+- [x] Deploy em produção 
 
 ---
 
@@ -153,8 +152,6 @@ npm start
 
 - [ ] Implementar autenticação com JWT
 - [ ] Adicionar testes unitários com xUnit
-- [ ] Deploy do backend no Railway ou Render
-- [ ] Deploy do frontend na Vercel
 - [ ] Melhorar validações nos DTOs
 
 ---
